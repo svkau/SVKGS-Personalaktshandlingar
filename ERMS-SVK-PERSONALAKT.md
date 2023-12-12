@@ -1,8 +1,8 @@
-![svkgs_arende](https://github.com/svkau/SvKGS-Arendehandlingar/assets/13225565/c16f2550-24cf-4a56-ae7f-5f257bc839dc)
+![svkgs_personalaktshandlingar](https://github.com/svkau/SVKGS-personalaktshandlingar/assets/13225565/40a87b57-c8ce-4227-a904-897026aef075)
 
-# SvKGS-Ärendehandlingar
+# SvKGS-Personalaktshandlingar
 
-***Version 1.0 beta***
+***Version 0.1***
 
 # Innehåll
 
@@ -57,17 +57,16 @@ ska arkiveras. Det utgör endast en del av hela arkivpaketet.
 Arkivpaketet i sin helhet utformas i enlighet med Riksarkivets specifikation
 [FGS Paketstruktur 1.2](https://riksarkivet.se/Media/pdf-filer/doi-t/FGS_Paketstruktur_RAFGS1V1_2.pdf).
 
-# 2. Specifikationer för ärendehandlingar
+# 2. Specifikationer för personalaktshandlingar
 
-*SvKGS Ärendehandlingar* avser arkivering av ärendeakter med tillhörande handlingar.
-Specifikationerna är främst avsedda för arkivering av information från diarieföringssystem som
-t.ex. Tietoevrys **Public 360°**, Vitecs **Acta** och **FAS** samt Eniacs **Aveny**.
+*SvKGS Personalaktshandlingar* avser arkivering av personalakter med tillhörande handlingar.
+Specifikationerna är en mindre anpassning av [SvKGS Ärendehandlingar](https://github.com/svkau/SvKGS-Arendehandlingar).
 
-Registrerad information om ett ärende och dess ingående handlingar bevaras i ett XML-dokument som
+Registrerad information om en personalakt och dess ingående handlingar bevaras i ett XML-dokument som
 regleras av specifikationerna genom användandet av scheman (XSD och Schematron).
 Även bifogade filer (i godkänt arkivformat) kan arkiveras.
 
-*SvKGS Ärendehandlingar* följer helt och hållet *Specification for the E-ARK Content Information Type
+*SvKGS Personalaktshandlingar* följer helt och hållet *Specification for the E-ARK Content Information Type
 Specification for Electronic Records Management Systems* (ERMS) version 2.1.0.
 Detta innebär att specifikationen också följer [FGS Ärendehantering 2.0](https://www.riksarkivet.se/faststallda-kommande-fgser)
 och [Riksarkivets tillämpning av CITS ERMS (för överlämnande till Riksarkivet)](https://www.riksarkivet.se/Media/pdf-filer/doi-t/Riksarkivets_tillampning_CITS_ERMS_overlamnande_V1.0.pdf). 
@@ -78,7 +77,7 @@ Dessa redovisas nedan i detta dokument.
 
 ## 2.2. XML-dokumentet
 
-Det XML-dokument som innehåller information om en ärendeakt och de ingående handlingarna definieras i ett XML-schema.
+Det XML-dokument som innehåller information om en personalakt och de ingående handlingarna definieras i ett XML-schema.
 Se avsnittet Scheman nedan. Detta är XML-dokumentets grundläggande uppbyggnad:
 
 
@@ -94,11 +93,11 @@ Se avsnittet Scheman nedan. Detta är XML-dokumentets grundläggande uppbyggnad:
 Elementet `erms` är dokumentets rot-element. Elementet `control` innehåller underelement med information om
 själva XML-dokumentet (se avsnitt [3.1. Övergripande information om XML-dokumentet](#31-övergripande-information-om-xml-dokumentet)).
 
-Elementet `aggregations` rymmer underelement av typen aggregation, vilket i det här fallet betyder ärendeakt
+Elementet `aggregations` rymmer underelement av typen aggregation, vilket i det här fallet betyder personalakt
 (se avsnitt [3.3. Information om ärendeakter](#33-information-om-ärendeakter)).
-Notera att det i *SvKGS Ärendehandlingar* endast får finnas en aggregation i varje XML-dokument.
+Notera att det i *SvKGS Personalaktshandlingar* endast får finnas en aggregation i varje XML-dokument.
 
-Elementet `aggregation` kan innehålla flera element av typen `record`, alltså ärendehandlingar
+Elementet `aggregation` kan innehålla flera element av typen `record`, alltså personalaktshandlingar
 (se avsnitt [3.4. Information om ärendehandlingar](#34-information-om-ärendehandlingar)).
 
 Varje `record` kan innehålla flera elementet av typen `appendix` som är en bifogad fil till den registrerade handlingen
@@ -106,7 +105,7 @@ Varje `record` kan innehålla flera elementet av typen `appendix` som är en bif
 
 Observera att det tillagda elementet `svkAppendix` används i *SvKGS Ärendehandlingar* i stället för ERMS-elementet `appendix`.
 
-I elementlistorna nedan finns de element som bör eller måste finnas i ett XML-dokument enligt *SvKGS Ärendehandlingar*.
+I elementlistorna nedan finns de element som bör eller måste finnas i ett XML-dokument enligt *SvKGS Personalaktshandlingar*.
 
 - [Elementlista 1. Kontroll](#elementlista-1-kontroll)
 - [Elementlista 2. ERMS-element för både ärendeakter och handlingar](#elementlista-2-erms-standardelement)
@@ -120,7 +119,7 @@ I elementlistorna nedan finns de element som bör eller måste finnas i ett XML-
 ## 2.3. Värdelistor
 
 I många fall är det värde som får anges i ett dataelement begränsat till värden som finns i en specificerad värdelista.
-De värdelistor som ingår i *SvKGS Ärendehandlingar* finns i ett eget dokument, [ERMS-SVK-ARENDE-vardelistor.md](ERMS-SVK-ARENDE-vardelistor.md).
+De värdelistor som ingår i *SvKGS Personalaktshandlingar* finns i ett eget dokument, [ERMS-SVK-ARENDE-vardelistor.md](ERMS-SVK-ARENDE-vardelistor.md).
 Värdelistorna kan innehålla värden från ERMS eller vara tillagda värden och är därför också en del av
 Svenska kyrkans anpassning av ERMS. Utgångspunkten har varit att så långt som möjligt använda värden från ERMS.
 
@@ -132,7 +131,7 @@ följer specifikationen.
 
 I ERMS ingår schemana [ERMS.xsd](https://citserms.dilcis.eu/schema/ERMS.xsd) och [ERMS.sch](https://citserms.dilcis.eu/schema/erms.sch).
 
-I *SvKGS Ärendehandlingar* används schemana
+I *SvKGS Personalaktshandlingar* används schemana
 
 **ERMS.xsd**<br/>
 Schemat används för att validera de delat av XML-dokumentet som följer ERMS-standard.
@@ -142,25 +141,25 @@ I detta schema definieras alla element som är Svenska kyrkans tillägg till ERM
 specifikt för *SvKGS Ärendehandlingar* utan används i andra anpassningar av ERMS.
 Schemat är publikt tillgängligt på [Github](https://github.com/svkau/ERMS-SVK-element).
 
-**ERMS-SVK-ARENDE.xsd**<br/>
+**ERMS-SVK-PERSONALAKT.xsd**<br/>
 Schemat reglerar själva strukturen på den del av XML-dokumentet som utgörs av Svenska kyrkans tillägg
-och vilka tillagda element som får användas i enlighet med SvKGS Ärendehandlingar.
+och vilka tillagda element som får användas i enlighet med SvKGS Personalaktshandlingar.
 Denna del av XML-dokumentet ingår i ERMS-elementet `additionalXMLData`.
 
-**ERMS-SVK-ARENDEN.sch**<br/>
+**ERMS-SVK-PERSONALAKT.sch**<br/>
 Schemat innehåller dels de regler som ingår i ERMS-standarden (ERMS.sch), dels Svenska kyrkans regler som
-de beskrivs i *SvKGS Ärendehandlingar*. De två sistnämnda schemana är specifika för
-*SvKGS Ärendehandlingar* och är publikt tillgängliga på [Github](https://github.com/svkau/SvKGS-Arendehandlingar).
+de beskrivs i *SvKGS Personalaktshandlingar*. De två sistnämnda schemana är specifika för
+*SvKGS Personalaktshandlingar* och är publikt tillgängliga på [Github](https://github.com/svkau/SvKGS-Personalaktshandlingar).
 
 En särskild anmärkning om elementet `appendix` i behöver göras. Eftersom det har funnits behov av att
 utöka detta element med flera underelement, och då det inte finns något element `additionalXMLData` här,
 används inte `appendix` utan i stället ett eget element `svkAppendix` som definieras i ERMS-SVK-element.xsd.
 
-Användandet av elementet appendix förbjuds genom en regel i ERMS-SVK.sch.
+Användandet av elementet appendix förbjuds genom en regel i ERMS-SVK-PERSONALAKT.sch.
 
-För att validera ett XML-dokument och avgöra om det följer specifikationerna i *SvKGS Ärendehandlingar*, måste man
-alltså använda både **ERMS.xsd** och **ERMS-SVK-ARENDE.xsd** (som i sin tur importerar och använder **ERMS-SVK-element.xsd**).
-Därtill måste dokumentet valideras mot **ERMS-SVK-ARENDE.sch**.
+För att validera ett XML-dokument och avgöra om det följer specifikationerna i *SvKGS Personalaktshandlingar*, måste man
+alltså använda både **ERMS.xsd** och **ERMS-SVK-PERSONALAKT.xsd** (som i sin tur importerar och använder **ERMS-SVK-element.xsd**).
+Därtill måste dokumentet valideras mot **ERMS-SVK-PERSONALAKT.sch**.
 
 ## 2.5. Datatyper
 
@@ -185,7 +184,7 @@ Vid angivande av tal (integer och decimal) används inte tusentalsavgränsare.
 
 Vid angivande av decimal används punkt som decimalavgränsare.
 
-## 2.6. Råd om användandet av *SvKGS Ärendehandlingar*
+## 2.6. Råd om användandet av *SvKGS Personalaktshandlingar*
 
 I tabellerna med dataelement nedan har varje element en identifieringskod (t.ex. ERMS-SVK:1).
 Även elementets motsvarande kod i ERMS anges, om det inte är ett tillagt element.
@@ -201,13 +200,13 @@ Informationen i det levererande IT-systemet måste mappas mot specifikationens d
 till ett XML-format som kan valideras av de scheman som ingår i specifikationen.
 Alla XML-filer måste ha teckenkodning UTF-8.
 
-En XML-fil får enbart innehålla ett enda ärende, men leveransen kan bestå av flera filer.
+En XML-fil får enbart innehålla en enda personalakt, men leveransen kan bestå av flera filer.
 Filerna samlas i en mapp, och om leveransen innehåller dokumentfiler samlas dessa i en undermapp.
-Varje sådant leveranspaket får bara innehålla ärenden från en och samma arkivbildare och ett och samma diarium.
+Varje sådant leveranspaket får bara innehålla personalakter från en och samma arkivbildare.
 
 <img src="https://github.com/svkau/SvKGS-Arendehandlingar/assets/13225565/98ae301d-a05f-4f40-aef9-2f77683210d6" alt="figur_03" width="70%"/>
 
-*Mappstruktur för ärendeleverans. Namn på mappar och filer är enbart exempel.*
+*Mappstruktur för personalaktsleverans. Namn på mappar och filer är enbart exempel.*
 
 Innan en leverans till e-arkivet görs, måste den levererande parten och e-arkivets förvaltningsorganisation
 tillsammans upprätta en leveransöverenskommelse där villkor och förutsättningar för leveransen specificeras.
@@ -224,15 +223,15 @@ Den underlättare förståelsen av informationen, om XML-filen skulle separeras 
 
 ---
 
-#### ERMS-SVK:1 - *Identifikator*
+#### ERMS-SVK-P:1 - *Identifikator*
 
-(ERMS1)
+(ERMS1, ERMS-SVK:1)
 
 > Identifierar ERMS-dokumentet
 
 > Obligatoriskt. Elementet får upprepas.
 
-> Tre identifikatorer måste användas: arkivbildarens namn och id samt ärendets nummer. Se exempel nedan.
+> Fyra identifikatorer måste användas: arkivbildarens namn och id, anställningsnummer och årtal då personalakten avslutades. Se exempel nedan.
 
 > **XML-element:**	`identification`<br/>
 > **Datatyp:**	string
