@@ -1,17 +1,18 @@
-![svkgs_arende](https://github.com/svkau/SvKGS-Arendehandlingar/assets/13225565/c16f2550-24cf-4a56-ae7f-5f257bc839dc)
+![svkgs_personalaktshandlingar](https://github.com/svkau/SVKGS-personalaktshandlingar/assets/13225565/40a87b57-c8ce-4227-a904-897026aef075)
 
 # Värdelistor
 
 Version 1.0 beta
 
-## ERMS-SVK-ARENDE-värdelista 1 - Typ av identifikator
+## ERMS-SVK-PERSONALAKT-värdelista 1 - Typ av identifikator
 
 | **Giltiga värden**  | **Kommentar**                           | **Källa** |
 |---------------------|-----------------------------------------|-----------|
 | aid                 | ArkivbildarID                           | ERMS-SVK  |
 | arkivbildare        | Arkivbildarens namn                     | ERMS-SVK  |
 | organisationsnummer | Tio siffror utan bindestreck            | ERMS-SVK  |
-| ärendenummer        | Ärendets beteckning (t.ex. F 2020-0435) | ERMS-SVK  |
+| anställningsnummer  | Anställds anställningsnummer            | ERMS-SVK-P |
+| årtal               | År då personalakt avslutades. Fyra siffror  | ERMS-SVK-P |
 
 ## ERMS-SVK-ARENDE-värdelista 2 - Klassificeringsstruktur
 
@@ -59,14 +60,11 @@ Version 1.0 beta
 |--------------------|---------------------------------------------|-----------|
 | agent              | Används i betydelsen "Annan aktör".         | ERMS-     |
 | closing_person     | Den som avslutar eller färdigställer något. | ERMS-SVK  |
-| counterpart        | Ärendepart, extern part i ett ärende.       | ERMS      |
 | creator            | Den som skapar eller påbörjar något.        | ERMS      |
-| delegator          | Person i vars ställe något utförs.          | ERMS-SVK  |
 | deliverer          | Ansvarig för leverans till e-arkivet.       | ERMS      |
 | editor             | Används i betydelsen "Medhandläggare".      | ERMS      |
-| receiver           | Mottagare av en utgående handling.          | ERMS      |
 | responsible_person | Ansvarig för ett ärende eller handling.     | ERMS      |
-| sender             | Avsändare av en inkommen handling.          | ERMS      |
+| employee           | Den anställde som en personalakt avser      | ERMS-SVK-P |
 
 ## ERMS-SVK-ARENDE-värdelista 7 - Ärende- och handlingsstatus
 
@@ -77,11 +75,12 @@ Version 1.0 beta
 
 ## ERMS-SVK-ARENDE-värdelista 8 - Typ av idNumber
 
-| **Giltiga värden**  | **Kommentar**                                              | **Källa** |
-|---------------------|------------------------------------------------------------|-----------|
-| username            | Personens användarnamn i ärendehanteringssystemet.         | ERMS-SVK  |
-| organisationsnummer | Tio siffror utan bindestreck.                              | ERMS-SVK  |
-| personnummer        | Personens personnummer.<br/>Tolv siffror utan bindestreck. | ERMS-SVK  |
+| **Giltiga värden**  | **Kommentar**                                              | **Källa**  |
+|---------------------|------------------------------------------------------------|------------|
+| username            | Personens användarnamn i ärendehanteringssystemet.         | ERMS-SVK   |
+| organisationsnummer | Tio siffror utan bindestreck.                              | ERMS-SVK   |
+| personnummer        | Personens personnummer.<br/>Tolv siffror utan bindestreck. | ERMS-SVK   |
+| anställningsnummer  | Personens anställningsnummer                               | ERMS-SVK-P |
 
 ## ERMS-SVK-ARENDE-värdelista 9 - Initiativ
 
@@ -104,37 +103,29 @@ Version 1.0 beta
 
 | **Giltiga värden** | **Kommentar** | **Källa** |
 |--------------------|---------------|-----------|
-| ankomstdatum       |               | ERMS-SVK  |
 | ansvarig           |               | ERMS-SVK  |
 | anteckning         |               | ERMS-SVK  |
-| avsändare          |               | ERMS-SVK  |
 | beskrivning        |               | ERMS-SVK  |
-| beslut             |               | ERMS-SVK  |
 | dokumentnummer     |               | ERMS-SVK  |
 | dokumentreferens   |               | ERMS-SVK  |
 | dokumentstatus     |               | ERMS-SVK  |
 | dokumenttitel      |               | ERMS-SVK  |
 | expedieringsdatum  |               | ERMS-SVK  |
-| fastighet          |               | ERMS-SVK  |
 | fil                |               | ERMS-SVK  |
 | form               |               | ERMS-SVK  |
 | handling           |               | ERMS-SVK  |
-| initiativ          |               | ERMS-SVK  |
 | klassificering     |               | ERMS-SVK  |
 | kommentar          |               | ERMS-SVK  |
 | medhandläggare     |               | ERMS-SVK  |
-| mottagare          |               | ERMS-SVK  |
 | nyckelord          |               | ERMS-SVK  |
-| projekt            |               | ERMS-SVK  |
 | riktning           |               | ERMS-SVK  |
 | sekretess          |               | ERMS-SVK  |
 | status             |               | ERMS-SVK  |
-| ärende             |               | ERMS-SVK  |
-| ärendemening       |               | ERMS-SVK  |
 | ärendenummer       |               | ERMS-SVK  |
 | ärendepart         |               | ERMS-SVK  |
 | ärendereferens     |               | ERMS-SVK  |
 | ärendestatus       |               | ERMS-SVK  |
+| personalakt        |               | ERMS-SVK-P |
 
 ## ERMS-SVK-ARENDE-värdelista 12 - Åtgärd
 
