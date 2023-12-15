@@ -1070,9 +1070,9 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:55 - *Säkerhetsklassning*
+#### ERMS-SVK-P:49 - *Säkerhetsklassning*
 
-(ERMS203)
+(ERMS203, ERMs-SVK:55)
 
 > Ärendets säkerhetsklass.
 
@@ -1081,11 +1081,13 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:56 - *Klassificering*
+#### ERMS-SVK-P:50 - *Klassificering*
 
-(ERMS208)
+(ERMS208, ERMS-SVK:56)
 
-> Namnet på den process i den officiella klassificeringsstrukturen som har angivits som klassificering av ärendet och de ingående handlingarna.
+> Namnet på den process i den officiella klassificeringsstrukturen som har angivits som klassificering av personalakten och de ingående handlingarna.
+
+> Personalakten ska alltid klassificeras med 
 
 > **XML-element:**	`classification`<br/>
 > **Datatyp:**	string
