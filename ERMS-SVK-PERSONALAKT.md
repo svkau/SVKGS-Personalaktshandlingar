@@ -1094,11 +1094,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:57 - *Klassificeringskod*
+#### ERMS-SVK-P:51 - *Klassificeringskod*
 
-(ERMS75)
+(ERMS75, ERMS-SVK:57)
 
-> Namnet på den process i den officiella klassificeringsstrukturen som har angivits som klassificering av ärendet och de ingående handlingarna.
+> Namnet på den process i den officiella klassificeringsstrukturen som har angivits som klassificering av personalakten och de ingående handlingarna.
 
 > **XML-element:**	`classification/@classificationCode`<br/>
 > **Datatyp:**	string
@@ -1115,9 +1115,9 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:58 - *Nyckelord*
+#### ERMS-SVK-P:52 - *Nyckelord*
 
-(ERMS223)
+(ERMS223, ERMS-SVK:58)
 
 > Samlingselement för nyckelord.
 
@@ -1125,9 +1125,9 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:59 - *Nyckelord*
+#### ERMS-SVK-P:53 - *Nyckelord*
 
-(ERMS224)
+(ERMS224, ERMS-SVK:59)
 
 ****
 
@@ -1153,46 +1153,32 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:60 - *Ärendemening*
+#### ERMS-SVK-P:54 - *Titel*
 
-(ERMS209)
+(ERMS209, ERMS-SVK:60)
 
-> Ärendemening, ärendets titel.
+> Personalaktens titel måste bestå av den anställdas för- och efternamn samt personnummer (12 siffror utan bindestreck).
 
 > **XML-element:**	`title`<br/>
 > **Datatyp:**	string
 
 ---
 
-#### ERMS-SVK:61 - *Offentlig titel*
-
-(ERMS210)
-
-> Används endast för Offentlig titel i leveranser från Public 360°.
-
-> Om elementet `otherTitel` används måste attributet `titleType` ha värdet ”publicTitle”.
-
-> **XML-element:**	`otherTitle/@titleType="publicTitle"`<br/>
-> **Datatyp:**	string
-
----
-
-#### Exempel 15 – Ärendemening och Offentlig titel
+#### Exempel 15 – Titel
 
 ```xml
 <aggregation>
-	<title>Ärendets titel</title>
-	<otherTitle titleType="publicTitle">En offentlig titel</otherTitle>
+	<title>Anders Andersson 190802021234</title>
 </aggregation>
 ```
 
 ---
 
-#### ERMS-SVK:62 - *Ärendestatus*
+#### ERMS-SVK-P:55 - *Status*
 
-(ERMS239)
+(ERMS239, ERMS-SVK:62)
 
-> Ärendets status.
+> Personalaktens status.
 
 > Obligatoriskt. Värdet väljs från [Värdelista 7](ERMS-SVK-ARENDE-vardelistor.md#erms-svk-arende-v%C3%A4rdelista-7---%C3%A4rende--och-handlingsstatus).
 >
@@ -1209,18 +1195,20 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:63 - *Ärendereferens*
+#### ERMS-SVK-P:56 - *Referens*
 
-(ERMS52-53)
+(ERMS52-53, ERMS-SVK:63)
 
-> Referens till och/eller från annat ärende.
+> Referens till och/eller från ett ärende eller annan personalakt.
 
 > Elementet kan upprepas.
 >
-> Om möjligt anges det andra ärendets *Ärendenummer* enligt specifikationen i detta dokument,
+> Om möjligt anges ärendets *Ärendenummer* enligt ***ERMS-SVK***,
 > annars ärendenumret i annat format eller fritext.
+>
+> Referens till en annan personalakt anges genom personalaktsnummer enligt denna specifikation.
 > 
-> Om elementet *Ärendereferens* används, måste attributet `relationType` ha värdet ”reference”.
+> Om elementet *Referens* används, måste attributet `relationType` ha värdet ”reference”.
 
 > **XML-element:**	`relation/@relationType="reference"`<br/>
 > **Datatyp:**	string
@@ -1232,14 +1220,15 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 ```xml
 <aggregation>
 	<relation relationType="reference">F 2019-0454</relation>
+	<relation relationType="reference">2012:191803049999</relation>
 </aggregation>
 ```
 
 ---
 
-#### ERMS-SVK:64 - *Utökad XML-data*
+#### ERMS-SVK-P:57 - *Utökad XML-data*
 
-(ERMS252, ERMS43)
+(ERMS252, ERMS43, ERMS-SVK:64)
 
 > Utökad XML-data är en del av Svenska kyrkans anpassning av ERMS.
 
@@ -1257,11 +1246,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:65 - *Aktörer*
+#### ERMS-SVK-P:58 - *Aktörer*
 
-(ERMS230-235)
+(ERMS230-235, ERMS-SVK:65)
 
-> Samlingselement för alla agerande parter i ärendet.
+> Samlingselement för alla agerande parter i personalakten.
 
 > Se avsnitt [3.2.1. Aktörer](ERMS-SVK-ARENDE.md#321-aktörer).
 
@@ -1269,13 +1258,13 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:66 - *Skapare*
+#### ERMS-SVK-P:59 - *Skapare*
 
-(ERMS230)
+(ERMS230, ERMS-SVK:66)
 
 ****
 
-> Den som har skapat ärendet i systemet.
+> Den som har skapat personalakten i systemet.
 
 > Om elementet *Skapare* används, måste attributet `agentType` ha värdet ”creator”.
 
@@ -1285,9 +1274,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:67 - *Handläggare*
+#### ERMS-SVK-P:60 - *Handläggare*
 
-> Ansvarig handläggare för ärendet.
+(ERMS-SVK:67)
+
+> Ansvarig handläggare för personalakten.
 
 > Om elementet *Handläggare* används, måste attributet `agentType` ha värdet ”responsible_person”.
  
@@ -1297,11 +1288,10 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:68 - *Medhandläggare*
+#### ERMS-SVK-P:61 - *Medhandläggare*
 
-(ERMS232)
+(ERMS232, ERMS-SVK:68)
 
-****
 
 > Eventuella medhandläggare utöver den ansvariga.
 
@@ -1315,23 +1305,39 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:69 - *Ärendepart*
+#### ERMS-SVK-P:62 - *Anställd*
 
->Extern part i ärendet.
+(ERMS-SVK:69)
 
-> Elementet kan upprepas.
+> Den anställda som personalakten avser.
 > 
->Om elementet *Ärendepart* används, måste attributet `agentType` ha värdet ”counterpart”.
- 
-> Om `idNumber` används hämtas värdet för `idNumberType`från [Värdelista 8](ERMS-SVK-ARENDE-vardelistor.md#erms-svk-arende-v%C3%A4rdelista-8---typ-av-idnumber).
+> Obligatoriskt.
+> 
+> Attributet `agentType` ska ha värdet "employee".
+> 
+> Attributet `idNumber` måste användas och ska vara den anställdas personnummer (12 siffror utan bindestreck).
 
-> **XML-element:**	`agent/@agentType="counterpart`
+> **XML-element:**	`agent/@agentType="employee`
+
+**Exempel:**
+
+```xml
+
+<agent agentype="employee">
+	<name>Anders Andersson</name>
+ 	<idNumber idNumberType="personnummer">190802021234</idNumber>
+</agent>
+
+```
+
 
 ---
 
-#### ERMS-SVK:70 - *Annan aktör*
+#### ERMS-SVK-P:63 - *Annan aktör*
 
-> Annan typ av aktör eller kontakt kopplad till ärendet.
+(ERMS-SVK:70)
+
+> Annan typ av aktör eller kontakt kopplad till personalakten.
 
 > Elementet kan upprepas.
 > 
@@ -1343,9 +1349,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:71 - *Avslutare*
+#### ERMS-SVK-P:64 - *Avslutare*
 
-> Den som har avslutat eller makulerat ärendet.
+(ERMS-SVK:71)
+
+> Den som har avslutat eller makulerat personalakten.
 
 > Om elementet *Avslutare* används, måste attributet `agentType` ha värdet ”other”
 > och `otherAgentType` värdet ”closing_person”.
@@ -1356,22 +1364,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:72 - *Beskrivning*
+#### ERMS-SVK-P:65 - *Datum*
 
-(ERMS211)
+(ERMS204-206, ERMS-SVK:73)
 
->En beskrivning av ärendet utöver *Ärendemening*.
-
-> **XML-element:**	`description`<br/>
-> **Datatyp:**	string
-
----
-
-#### ERMS-SVK:73 - *Datum*
-
-(ERMS204-206)
-
-> Samlingselement för datum som gäller för ärendet.
+> Samlingselement för datum som gäller för personalakten.
 
 > Se avsnitt [3.2.2. Datum](ERMS-SVK-ARENDE.md#322-datum).
 
@@ -1379,15 +1376,15 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:74 - *Skapat*
+#### ERMS-SVK-P:66 - *Skapat*
 
-(ERMS232)
+(ERMS232, ERMS-SVK:74)
 
-> Datum då ärendet skapades i systemet. Här avses ett av systemet automatiskt satt datum.
+> Datum då personalakten skapades i systemet. Här avses ett av systemet automatiskt satt datum.
 
 > Obligatoriskt.
 > 
-> Om uppgiften saknas i diariesystemet, används samma datum som för *Öppnat*.
+> Om uppgiften saknas i IT-systemet, används samma datum som för *Öppnat*.
 > 
 > Om elementet *Skapat* används, måste `dateType` ha värdet ”created”.
 
@@ -1396,9 +1393,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:75 - *Öppnat*
+#### ERMS-SVK-P:67 - *Öppnat*
 
-> Datum då ärendet officiellt öppnades.
+(ERMS-SVK:75)
+
+> Datum då personalakten officiellt öppnades.
 
 > Obligatoriskt.
 > 
@@ -1409,9 +1408,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:76 - *Avslutat*
+#### ERMS-SVK-P:68 - *Avslutat*
 
-> Datum då ärendet avslutades eller makulerades.
+(ERMS-SVK:76)
+
+> Datum då personalakten avslutades eller makulerades.
 
 > Obligatoriskt.
 > 
@@ -1422,40 +1423,40 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:77 - *Beslut i ärendet*
+#### ERMS-SVK-P:69 - *Beslut rörande anställningen*
 
-(ERMS240)
+(ERMS240, ERMS-SVK:77)
 
->Samlingselement som används för uppgifter om beslut som har fattats i ärendet och
-> som i diariesystemet har registrerats separat och inte som en vanlig handling.
+> Samlingselement som används för uppgifter om beslut som har fattats rörande anställningen och
+> som i IT-systemet har registrerats separat och inte som en vanlig handling.
 
->Elementet kan upprepas.
+> Elementet kan upprepas.
 > 
-> *SvKGS Ärendehandlingar* har alltså ett betydligt snävare användningsområde
+> *SvKGS Personalaktshandlingar* har alltså ett betydligt snävare användningsområde
 > av elementet `action` än vad som är fallet i ERMS.
 
 > **XML-element:**	`action`<br/>
 
 ---
 
-#### ERMS-SVK:78 - *Beslutstext*
+#### ERMS-SVK-P:70 - *Beslutstext*
 
-(ERMS84)
+(ERMS84, ERMS-SVK:78)
 
 >Beslutets lydelse samt ev. referens till protokoll.
 
-> Obligatoriskt om elementet *Beslut i ärendet* används.
+> Obligatoriskt om elementet *Beslut rörande anställningen* används.
 
 > **XML-element:**	`actionText`<br/>
 > **Datatyp:**	string
 
 ---
 
-#### ERMS-SVK:79 - *Typ av händelse*
+#### ERMS-SVK-P:71 - *Typ av händelse*
 
-(ERMS87)
+(ERMS87, ERMS-SVK:79)
 
-> Obligatoriskt om elementet *Beslut i ärendet* används.
+> Obligatoriskt om elementet *Beslut rörande anställningen* används.
 > 
 > Elementet måste ha värdet ”beslut”.
 
@@ -1464,9 +1465,9 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:80 - *Beslutsdatum*
+#### ERMS-SVK-P:72 - *Beslutsdatum*
 
-(ERMS89, ERMS47)
+(ERMS89, ERMS47, ERMS-SVK:80)
 
 > Datum då beslutet fattades.
  
@@ -1479,9 +1480,9 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:81 - *Beslutsfattare*
+#### ERMS-SVK-P:73 - *Beslutsfattare*
 
-(ERMS90-91, 93)
+(ERMS90-91, 93, ERMS-SVK:81)
 
 > Namn på person eller organ som har fattat beslutet.
  
@@ -1493,7 +1494,7 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### Exempel 17 – Beslut i ärendet
+#### Exempel 17 – Beslut rörande anställningen
 
 ```xml
 <aggregation>
@@ -1519,47 +1520,31 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-### Elementlista 5. Svenska kyrkans tilläggsinformation om ärendeakter.
+### Elementlista 5. Svenska kyrkans tilläggsinformation om personalakter.
 
 ---
 
-#### ERMS-SVK:82 - *Tilläggsinformation*
+#### ERMS-SVK-P:74 - *Tilläggsinformation*
+
+(ERMS-SVK:82)
 
 > De element som inte ingår i ERMS utan är tillägg i Svenska kyrkans anpassning är samlade i elementet *Tilläggsinformation*.
 
 > Obligatoriskt.
 
-> **XML-element:** `additionalInformation/additionalXMLData/svk:ermsSvkArende/svk:ermsSvkAggregation`<br/>
+> **XML-element:** `additionalInformation/additionalXMLData/svk:ermsSvkPersonalakt/svk:ermsSvkAggregation`<br/>
 
 ---
 
-#### ERMS-SVK:83 - *Version av SvKGS Ärendehandlingar*
+#### ERMS-SVK-P:75 - *Version av SvKGS Personalaktshandlingar*
 
-> Anger vilken version av SvKGS Ärendehandlingar som XML-dokumentet är kompatibelt med.
+(ERMS-SVK:83)
+
+> Anger vilken version av *SvKGS Personalaktshandlingar* som XML-dokumentet är kompatibelt med.
 
 > Obligatoriskt.
 
-> **XML-element:** `svk:ermsSvkArende/@ermsSvkArendeVersion="1.0"` (decimal)<br/>
-
-
----
-
-#### ERMS-SVK:84 - *Initiativ*
-
-> Anger om initiativ till ärendets öppnande är externt
-> (genom en inkommande handling), eller om ärendet har öppnats på eget (internt) initiativ.
-
-> Värdet väljs från [Värdelista 9](ERMS-SVK-ARENDE-vardelistor.md#erms-svk-arende-v%C3%A4rdelista-9---initiativ).
-> Möjliga värden: ”externt”eller ”eget”.
-
-> **XML-element:** `svk:initiative`<br/>
-> **Datatyp:** token
-
----
-
-#### *Relaterade objekt*
-
-> Se [ERMS-SVK:28](ERMS-SVK-ARENDE.md#erms-svk28---relaterade-objekt).
+> **XML-element:** `svk:ermsSvkPersonalakt/@ermsSvkPersonalaktVersion="1.0"` (decimal)<br/>
 
 ---
 
@@ -1575,19 +1560,19 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-## 3.4. Information om ärendehandlingar
+## 3.4. Information om personalaktshandlingar
 
 ---
 
-### Elementlista 6. Ärendehandlingar
+### Elementlista 6. Personalaktshandlingar
 
 ---
 
-#### ERMS-SVK:85 - *Handling*
+#### ERMS-SVK-P:76 - *Handling*
 
-(ERMS129)
+(ERMS129, ERMS-SVK:85)
 
-> Samlingselement med information om en i ärendet registrerad handling.
+> Samlingselement med information om en i akten registrerad handling.
 
 > Obligatoriskt. Elementet kan upprepas.
 
@@ -1595,11 +1580,11 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:86 - *Identifikator*
+#### ERMS-SVK-P:77 - *Identifikator*
 
-(ERMS130)
+(ERMS130, ERMS-SVK:86)
 
-> Identifikator för dokumentet i form av UUID. Identifikatorn anges
+> Identifikator för handlingen i form av UUID. Identifikatorn anges
 > automatiskt redan i det levererande systemet eller vid överföring till e-arkivet.
 
 > Obligatoriskt.
