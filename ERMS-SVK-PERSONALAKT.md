@@ -1594,15 +1594,13 @@ Elementet `date` kräver datatypen dateTime. Se avsnittet **[2.5. Datatyper](#25
 
 ---
 
-#### ERMS-SVK:87 - *Handlingstyp*
+#### ERMS-SVK-P:78 - *Handlingstyp*
 
-(ERMS131)
+(ERMS131, ERMS-SVK:87)
 
-> Övergripande typ av handling. Motsvarar **inte** handlingstyp i arkivredovisning/dokumenthanteringsplan.
+> Handlingstyp enligt SvKB 2016:6 16 §.
 
 > Obligatoriskt. Värdet väljs från [Värdelista 13](ERMS-SVK-ARENDE-vardelistor.md#erms-svk-arende-v%C3%A4rdelista-13---handlingstyp).
-> 
-> Oavsett handlingstyp kan värdet ”ärendedokument” alltid användas.
 
 > **XML-element:** `record/@recordType`<br/>
 > **Datatyp:** string
