@@ -231,3 +231,30 @@ Version 1.0 beta
 | received           |                              | ERMS      |
 | sent               |                              | ERMS      |
 | start              |                              | ERMS      |
+
+
+## ERMS-SVK-PERSONALAKT-värdelista 23 - Typ av personalaktshandling
+
+| **Giltiga värden**     | **Kommentar**                                               | **Källa**        |
+|------------------------|-------------------------------------------------------------|------------------|      
+| ansökan                | Ansökningshandlingar med betyg och andra merithandlingar.   | SvKB 2016:6 16 § |
+| anställningsavtal      | Anställningsavtal/-bevis eller motsvarande.                 | SvKB 2016:6 16 § |
+| befattningsbeskrivning | Befattnings och/eller arbetsbeskrivning.                    | SvKB 2016:6 16 § |
+| lönebeslut             | Beslut rörande löner.                                       | SvKB 2016:6 16 § |
+| sysselsättningsgrad    | Handlingar rörande förändrad sysselsättningsgrad.           | SvKB 2016:6 16 § |
+| tjänstledighet         | Tjänstledighetsansökningar som ska bevaras.                 | SvKB 2016:6 16 § |
+| tjänstgöring           | Tjänstgöringsintyg som innehåller värdeomdömen.             | SvKB 2016:6 16 § |
+| tjänstgöringsbetyg     |                                                             | SvKB 2016:6 16 § |
+| personalutbildning     | Viktigare handlingar rörande anställds personalutbildningar och annan kompetensutveckling/-förnyelse. | SvKB 2016:6 16 § |
+| namnändring            | Aviseringar och övriga handlingar rörande namnändring.      | SvKB 2016:6 16 § |
+| entledigande           | Ansökningar om entledigande.                                | SvKB 2016:6 16 § |
+| avsked                 | Handlingar rörande avsked, uppsägningar, omplaceringar.     | SvKB 2016:6 16 § |
+| arbetssocialt          | Utredningar rörande arbetssociala och psykosociala frågor på individnivå. | SvKB 2016:6 16 § |
+| arbetsskador           | Handlingar rörande arbetsskador.                            | SvKB 2016:6 16 § |
+| rehabilitering         | Handlingar rörande rehabiliteringsutredningar.              | SvKB 2016:6 16 § |
+| arbetshjälpmedel       | Ansökningar om bidrag till arbetshjälpmedel.                | SvKB 2016:6 16 § |
+| rekryteringsstöd       | Beslut om rekryteringsstöd.                                 | SvKB 2016:6 16 § |
+| försäkringar           | Tjänstereseförsäkringar och försäkringar rörande utlandsplacerad personal. | SvKB 2016:6 16 § |
+| arbetstillstånd        | Arbetstillstånd, visum och liknande.                        | SvKB 2016:6 16 § |
+| pension                | Handlingar i samband med pensionsutredning.                 | ERMS          |
+| övrigt                 | Övriga handlingar av betydelse rörande anställningen eller den anställda. | SvKB 2016:6 16 § |
